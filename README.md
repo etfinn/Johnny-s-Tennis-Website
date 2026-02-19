@@ -59,34 +59,12 @@
             list-style: none;
         }
 
-        .nav-links a {
-            text-decoration: none;
+        .nav-links li {
             color: var(--dark);
             font-weight: 600;
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--tennis-yellow);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--court-green);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
         }
 
         /* Hero Section */
@@ -155,21 +133,14 @@
             background: var(--tennis-yellow);
             color: var(--dark);
             padding: 1.2rem 3rem;
-            text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             border-radius: 2px;
-            transition: all 0.3s;
+            border: none;
+            font-family: 'Karla', sans-serif;
             box-shadow: 0 10px 30px rgba(212, 255, 0, 0.3);
-        }
-
-        .cta-button:hover {
-            background: var(--clay-orange);
-            color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(232, 93, 4, 0.4);
         }
 
         /* About Section */
@@ -359,67 +330,34 @@
             opacity: 0.9;
         }
 
-        .contact-form {
-            max-width: 600px;
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .form-group {
-            margin-bottom: 2rem;
-            text-align: left;
+        .contact-item {
+            text-align: center;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9rem;
+        .contact-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
             letter-spacing: 1px;
         }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: none;
-            border-radius: 2px;
-            font-family: 'Karla', sans-serif;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.95);
-            transition: all 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px var(--tennis-yellow);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .submit-button {
-            background: var(--tennis-yellow);
-            color: var(--dark);
-            padding: 1.2rem 3rem;
-            border: none;
+        .contact-item p {
+            color: var(--tennis-yellow);
+            font-size: 1.3rem;
             font-weight: 600;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 2px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Karla', sans-serif;
-        }
-
-        .submit-button:hover {
-            background: var(--clay-orange);
-            color: var(--white);
-            transform: translateY(-3px);
         }
 
         /* Footer */
@@ -440,19 +378,6 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
-        }
-
-        .social-links a {
-            color: var(--white);
-            font-size: 1.5rem;
-            opacity: 0.7;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            opacity: 1;
-            color: var(--tennis-yellow);
-            transform: translateY(-3px);
         }
 
         /* Responsive */
@@ -485,18 +410,23 @@
             .contact h2 {
                 font-size: 3rem;
             }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">Tennis Pro</div>
+        <div class="logo">Tennis Lessons with Johnny</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
         </ul>
     </nav>
 
@@ -504,11 +434,12 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>
-                Elevate Your
-                <span>Game</span>
+                Equip yourself with the
+                <span>Finnie</span>
+                difference
             </h1>
-            <p>Professional tennis coaching tailored to your goals. From beginners to advanced players, unlock your full potential on the court.</p>
-            <a href="#contact" class="cta-button">Book a Lesson</a>
+            <p>My name is Johnny Finnie. I will provide you with professional tennis coaching tailored to your goals. From beginners to advanced players, unlock your full potential on the court.</p>
+            <button class="cta-button">Book a Lesson Today!</button>
         </div>
     </section>
 
@@ -518,11 +449,12 @@
             <h2>About Your Coach</h2>
             <p>With years of experience on the court and a passion for teaching, I'm dedicated to helping players of all levels improve their game. Whether you're picking up a racket for the first time or looking to compete at a higher level, I'll create a personalized training program that fits your goals.</p>
             <p>My coaching philosophy focuses on building strong fundamentals, developing strategic thinking, and fostering a love for the game that lasts a lifetime.</p>
+            <p>Located at 10516 Conway Road, I will give you a personal approach to growing your tennis game.</p>
             
             <div class="stats">
                 <div class="stat">
-                    <div class="stat-number">1</div>
-                    <div class="stat-label">Year of Coaching Experience</div>
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Years of Coaching Experience</div>
                 </div>
                 <div class="stat">
                     <div class="stat-number">100+</div>
@@ -558,99 +490,36 @@
                 <p>Train with others at your level. Great for building consistency, competitive spirit, and making tennis friends.</p>
                 <div class="service-price">$20/hr</div>
             </div>
-
-            <div class="service-card">
-                <div class="service-icon">🎯</div>
-                <h3>Match Strategy</h3>
-                <p>Analyze your game, develop winning tactics, and learn how to compete under pressure. Ideal for tournament preparation.</p>
-                <div class="service-price">$75/hr</div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">👨‍👩‍👧‍👦</div>
-                <h3>Junior Programs</h3>
-                <p>Fun, engaging lessons for young players. Build skills, confidence, and a lifelong love of tennis in a supportive environment.</p>
-                <div class="service-price">$40/hr</div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">💪</div>
-                <h3>Fitness Training</h3>
-                <p>Tennis-specific conditioning to improve speed, agility, endurance, and injury prevention. On-court and off-court workouts.</p>
-                <div class="service-price">$55/hr</div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">📦</div>
-                <h3>Package Deals</h3>
-                <p>Save with multi-lesson packages. Commit to your improvement and get the best value with 5, 10, or 20 lesson bundles.</p>
-                <div class="service-price">Save 15%</div>
-            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Ready to Start?</h2>
-        <p>Book your first lesson today and take the first step toward mastering your game</p>
+        <h2>Get In Touch</h2>
+        <p>Ready to elevate your game? Reach out to book your lesson today</p>
 
-        <form class="contact-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <h3>Phone</h3>
+                <p>314-346-8680</p>
             </div>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p>johnsfinnie@icloud.com</p>
             </div>
-
-            <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone">
-            </div>
-
-            <div class="form-group">
-                <label for="message">Tell me about your tennis goals</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-
-            <button type="submit" class="submit-button">Send Message</button>
-        </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Tennis Pro Lessons. All rights reserved.</p>
         <div class="social-links">
-            <a href="#">📧</a>
-            <a href="#">📱</a>
-            <a href="#">🎾</a>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Form submission (you'll need to connect this to an actual backend or email service)
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your interest! I\'ll get back to you soon.');
-            this.reset();
-        });
-
         // Animate stats on scroll
         const observerOptions = {
             threshold: 0.5,
@@ -661,14 +530,3 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.stat').forEach(stat => {
-            stat.style.animationPlayState = 'paused';
-            observer.observe(stat);
-        });
-    </script>
-</body>
-</html>
