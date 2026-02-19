@@ -108,7 +108,7 @@
 
         .hero h1 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 6rem;
+            font-size: 4rem;
             color: var(--white);
             line-height: 0.9;
             margin-bottom: 1.5rem;
