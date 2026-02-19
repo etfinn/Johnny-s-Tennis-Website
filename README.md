@@ -387,11 +387,11 @@
             }
 
             .hero h1 {
-                font-size: 3.5rem;
+                font-size: 2rem;
             }
 
             .hero h1 span {
-                font-size: 4.5rem;
+                font-size: 3.5rem;
             }
 
             .about {
