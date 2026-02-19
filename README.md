@@ -521,11 +521,11 @@
             
             <div class="stats">
                 <div class="stat">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Year of Coaching Experience</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">200+</div>
+                    <div class="stat-number">100+</div>
                     <div class="stat-label">Students Coached</div>
                 </div>
                 <div class="stat">
